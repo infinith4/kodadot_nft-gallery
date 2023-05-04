@@ -1,13 +1,13 @@
 <template>
-  <b-field class="mt-4" :label="$t(label)" label-position="">
+  <NeoField class="mt-4" :label="$t(label)" label-position="">
     <b-slider
       v-model="vValue"
       :min="min"
       :max="max"
       :ticks="ticks"
-      :customFormatter="customFormatter"
+      :custom-formatter="customFormatter"
       :lazy="lazy" />
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

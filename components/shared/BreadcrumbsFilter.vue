@@ -1,5 +1,5 @@
 <template>
-  <b-field grouped group-multiline class="filters-tag">
+  <NeoField grouped group-multiline class="filters-tag">
     <template v-for="(value, key) in breads">
       <NeoTag
         v-if="key === 'search'"
@@ -48,7 +48,7 @@
       @click="clearAllFilters">
       <span>{{ $t('sort.clearAll') }}</span>
     </div>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <b-field :label="$i18n.t(label)">
+  <NeoField :label="$i18n.t(label)">
     <b-input
       ref="input"
       :value="value"
@@ -18,7 +18,7 @@
         <span class="has-text-primary is-italic">{{ message }}</span>
       </transition>
     </template>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts" setup>

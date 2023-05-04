@@ -1,5 +1,5 @@
 <template>
-  <b-field :label="$t(label)">
+  <NeoField :label="$t(label)">
     <b-numberinput
       v-model="vValue"
       :placeholder="placeholder"
@@ -17,7 +17,7 @@
         }}</span>
       </transition>
     </template>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <b-field>
+  <NeoField>
     <b-taginput
       v-model="tags"
       :data="allTags"
@@ -11,7 +11,7 @@
       open-on-focus
       type="is-primary"
       @input="handleInput" />
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

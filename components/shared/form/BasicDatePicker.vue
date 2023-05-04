@@ -1,5 +1,5 @@
 <template>
-  <b-field :label="$t(label)">
+  <NeoField :label="$t(label)">
     <b-datepicker
       ref="datepicker"
       v-model="vValue"
@@ -7,10 +7,10 @@
       :placeholder="placeholder">
     </b-datepicker>
     <b-button
-      @click="$refs.datepicker.toggle()"
       icon-left="calendar-today"
-      type="is-primary" />
-  </b-field>
+      type="is-primary"
+      @click="$refs.datepicker.toggle()" />
+  </NeoField>
 </template>
 
 <script lang="ts">

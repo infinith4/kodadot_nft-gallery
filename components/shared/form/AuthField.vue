@@ -1,5 +1,5 @@
 <template>
-  <b-field>
+  <NeoField>
     <Auth />
-  </b-field>
+  </NeoField>
 </template>

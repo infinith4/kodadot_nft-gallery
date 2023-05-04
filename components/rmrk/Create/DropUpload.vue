@@ -8,7 +8,7 @@
         @error="hasError = true" />
     </div>
     <div class="field">
-      <b-field class="file is-primary">
+      <NeoField class="file is-primary">
         <b-upload
           ref="upload"
           v-model="file"
@@ -38,7 +38,7 @@
             </div>
           </section>
         </b-upload>
-      </b-field>
+      </NeoField>
       <transition v-if="fileSizeFailed" name="fade">
         <div class="help is-danger">
           {{ $t('tooltip.failedMaxSize') }}

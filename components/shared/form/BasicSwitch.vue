@@ -1,5 +1,5 @@
 <template>
-  <b-field>
+  <NeoField>
     <b-switch
       v-model="isSwitched"
       :rounded="false"
@@ -12,7 +12,7 @@
         {{ properLabel }}
       </component>
     </b-switch>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

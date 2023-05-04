@@ -1,6 +1,6 @@
 <template>
   <div class="setting-chooser-wrapper">
-    <b-field :label="label">
+    <NeoField :label="label">
       <b-select v-model="selected" :placeholder="label" expanded>
         <option
           v-for="option in options"
@@ -9,7 +9,7 @@
           {{ option.text }}
         </option>
       </b-select>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

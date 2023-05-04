@@ -3,7 +3,7 @@
     <Loader v-model="isLoading" :status="status" />
     <BaseCollectionForm ref="collectionForm" v-bind.sync="base">
       <template #main>
-        <b-field class="mb-5" />
+        <NeoField class="mb-5" />
       </template>
       <template #footer>
         <!-- Hidden as of 11.July.2022 due to lack of convenience #3407 -->
@@ -13,26 +13,26 @@
           class="mb-3"
           visible="collapse.collection.attributes.show"
           hidden="collapse.collection.attributes.hide" /> -->
-        <b-field>
+        <NeoField>
           <p class="has-text-weight-medium is-size-6 has-text-info">
             {{ $t('mint.deposit') }}:
             <Money :value="collectionDeposit" :token-id="tokenId" inline />
           </p>
-        </b-field>
-        <b-field>
+        </NeoField>
+        <NeoField>
           <AccountBalance
             :token-id="feesToken === 'KSM' ? tokenId : undefined" />
-        </b-field>
-        <b-field>
+        </NeoField>
+        <NeoField>
           <MultiPaymentFeeButton :account-id="accountId" :prefix="urlPrefix" />
-        </b-field>
-        <b-field type="is-danger" :message="balanceNotEnoughMessage">
+        </NeoField>
+        <NeoField type="is-danger" :message="balanceNotEnoughMessage">
           <SubmitButton
             expanded
             label="create collection"
             :loading="isLoading"
             @click="submit" />
-        </b-field>
+        </NeoField>
       </template>
     </BaseCollectionForm>
   </div>

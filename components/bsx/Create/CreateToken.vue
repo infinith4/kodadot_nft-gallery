@@ -35,7 +35,7 @@
         <RoyaltyForm v-if="hasRoyalty" key="royalty" v-bind.sync="royalty" />
       </template>
       <template #footer>
-        <b-field key="advanced">
+        <NeoField key="advanced">
           <CollapseWrapper
             v-if="base.edition > 1"
             visible="mint.expert.show"
@@ -46,21 +46,21 @@
               class="mt-3"
               label="mint.expert.postfix" />
           </CollapseWrapper>
-        </b-field>
-        <b-field key="deposit">
+        </NeoField>
+        <NeoField key="deposit">
           <p class="has-text-weight-medium is-size-6 has-text-info">
             {{ $t('mint.deposit') }}:
             <Money :value="deposit" :token-id="tokenId" inline />
           </p>
-        </b-field>
-        <b-field key="balance">
+        </NeoField>
+        <NeoField key="balance">
           <AccountBalance
             :token-id="feesToken === 'KSM' ? tokenId : undefined" />
-        </b-field>
-        <b-field key="token">
+        </NeoField>
+        <NeoField key="token">
           <MultiPaymentFeeButton :account-id="accountId" :prefix="urlPrefix" />
-        </b-field>
-        <b-field
+        </NeoField>
+        <NeoField
           key="submit"
           type="is-danger"
           :message="balanceNotEnoughMessage">
@@ -69,7 +69,7 @@
             label="mint.submit"
             :loading="isLoading"
             @click="submit()" />
-        </b-field>
+        </NeoField>
       </template>
     </BaseTokenForm>
   </div>

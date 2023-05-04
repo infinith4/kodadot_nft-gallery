@@ -1,5 +1,5 @@
 <template>
-  <b-field :label="$t(label)">
+  <NeoField :label="$t(label)">
     <b-input
       ref="balance"
       v-model="metaValue"
@@ -18,7 +18,7 @@
         unit
       }}</span>
     </p>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

@@ -3,14 +3,14 @@
     <p class="title is-6">
       {{ $t('mint.expert.count', [value.length]) }}
     </p>
-    <b-field :label="$t('mint.expert.batchSend')">
+    <NeoField :label="$t('mint.expert.batchSend')">
       <b-input
-        @input="handleInput"
         type="textarea"
         :placeholder="'Distribute NFTs to multiple addresses like this:\n- HjshJ....3aJk\n- FswhJ....3aVC\n- HjW3J....9c3V'"
         spellcheck="true"
-        custom-class="ap-textarea"></b-input>
-    </b-field>
+        custom-class="ap-textarea"
+        @input="handleInput"></b-input>
+    </NeoField>
   </div>
 </template>
 

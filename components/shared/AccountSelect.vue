@@ -1,5 +1,5 @@
 <template>
-  <b-field :label="label">
+  <NeoField :label="label">
     <b-select v-model="account" placeholder="Select account" expanded>
       <option disabled selected value="">--</option>
       <option
@@ -10,7 +10,7 @@
         {{ option.address | shortAddress(10, -10) }}
       </option>
     </b-select>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

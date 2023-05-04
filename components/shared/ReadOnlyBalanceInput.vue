@@ -1,6 +1,6 @@
 <template>
   <div class="arguments-wrapper">
-    <b-field :label="$t(labelInput)" class="balance">
+    <NeoField :label="$t(labelInput)" class="balance">
       <b-input
         v-model="inputValue"
         type="number"
@@ -10,7 +10,7 @@
       <div class="option">
         {{ label }}
       </div>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <b-field>
+  <NeoField>
     <b-button
       :type="type"
       :icon-left="icon"
@@ -12,7 +12,7 @@
         {{ $t(label) }}
       </slot>
     </b-button>
-  </b-field>
+  </NeoField>
 </template>
 
 <script setup lang="ts">

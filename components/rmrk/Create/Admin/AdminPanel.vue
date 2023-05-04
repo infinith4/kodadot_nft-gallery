@@ -5,12 +5,12 @@
     <p class="title is-size-3">
       {{ $t('action.admin') }}
     </p>
-    <b-field>
+    <NeoField>
       <Auth />
-    </b-field>
+    </NeoField>
 
     <template v-if="accountId">
-      <b-field :label="$t('collection')">
+      <NeoField :label="$t('collection')">
         <b-select
           v-model="selectedCollection"
           placeholder="Select a collection"
@@ -22,14 +22,14 @@
             {{ option.name }} {{ option.id }} ({{ option.available }})
           </option>
         </b-select>
-      </b-field>
+      </NeoField>
     </template>
     <h6 v-if="selectedCollection" class="subtitle is-6">
       NFTs to process ({{ selectedCollection.available }} pieces)
     </h6>
-    <b-field v-if="!selectedCollection && !collections.length">
+    <NeoField v-if="!selectedCollection && !collections.length">
       <NoCollection label="helper.noCollections" />
-    </b-field>
+    </NeoField>
 
     <template v-if="selectedCollection">
       <ActionSelector v-model="action" />
@@ -41,10 +41,10 @@
 
       <BasicSwitch v-model="listed" label="action.omitListed" />
 
-      <b-field>
+      <NeoField>
         <PasswordInput v-model="password" :account="accountId" />
-      </b-field>
-      <b-field>
+      </NeoField>
+      <NeoField>
         <b-button
           type="is-primary"
           icon-left="paper-plane"
@@ -54,7 +54,7 @@
           @click="sub">
           {{ $t('action.click', [action]) }}
         </b-button>
-      </b-field>
+      </NeoField>
     </template>
   </section>
 </template>

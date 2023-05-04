@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-field>
+    <NeoField>
       <p class="control">
         <NeoButton
           icon-left="grid-2"
@@ -19,7 +19,7 @@
           :active="gridSize === 'small'"
           @click.native="changeGridLayout(largeGridLayout, 'small')" />
       </p>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

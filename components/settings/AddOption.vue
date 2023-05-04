@@ -3,7 +3,7 @@
     <label
       ><b>Add {{ label }}</b></label
     >
-    <b-field class="add-option-wrapper">
+    <NeoField class="add-option-wrapper">
       <b-input v-model="text" placeholder="Name" />
       <b-input
         v-model="value"
@@ -18,12 +18,12 @@
           Add
         </b-button>
       </p>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue, Provide, Emit, Prop } from 'nuxt-property-decorator'
+import { Component, Emit, Prop, Provide, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class AddOption extends Vue {

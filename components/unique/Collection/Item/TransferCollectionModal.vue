@@ -1,14 +1,14 @@
 <template>
-  <ModalWrapper icon="paper-plane" title="Transfer collection" isRight>
-    <template v-slot:default>
+  <ModalWrapper icon="paper-plane" title="Transfer collection" is-right>
+    <template #default>
       <Loader v-model="isLoading" :status="status" />
-      <b-field>
+      <NeoField>
         <Auth />
-      </b-field>
-      <b-field>
+      </NeoField>
+      <NeoField>
         <AddressInput v-model="destinationAddress" :strict="false" />
-      </b-field>
-      <b-field>
+      </NeoField>
+      <NeoField>
         <b-button
           type="is-primary"
           icon-left="paper-plane"
@@ -19,7 +19,7 @@
           @click="submit">
           {{ $t('general.submit') }}
         </b-button>
-      </b-field>
+      </NeoField>
     </template>
   </ModalWrapper>
 </template>
@@ -27,7 +27,7 @@
 <script lang="ts">
 import MetaTransactionMixin from '@/utils/mixins/metaMixin'
 import { isAddress } from '@polkadot/util-crypto'
-import { Component, mixins, Prop } from 'nuxt-property-decorator'
+import { Component, Prop, mixins } from 'nuxt-property-decorator'
 import { showNotification } from '@/utils/notification'
 
 const components = {

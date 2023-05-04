@@ -17,7 +17,7 @@
         <Money :value="balance" inline />
       </p>
 
-      <b-field label="Handle">
+      <NeoField label="Handle">
         <b-input
           v-model="identity.display"
           :placeholder="$i18n.t('identity.onChainPlaceholder')"
@@ -25,7 +25,7 @@
           required
           :validation-message="$i18n.t('identity.handleRequired')">
         </b-input>
-      </b-field>
+      </NeoField>
 
       <BasicInput
         v-model="identity.legal"

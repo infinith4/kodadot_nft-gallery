@@ -1,9 +1,9 @@
 <template>
-  <b-field>
+  <NeoField>
     <b-checkbox v-model="isChecked" :disabled="disabled">
       {{ $t(label) }}
     </b-checkbox>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

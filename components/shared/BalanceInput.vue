@@ -1,6 +1,6 @@
 <template>
   <div class="arguments-wrapper">
-    <b-field
+    <NeoField
       :label="$t(label)"
       class="balance"
       :type="checkZeroFailed ? 'is-danger' : ''">
@@ -32,7 +32,7 @@
       </div>
       <p v-if="checkZeroFailed" class="help is-danger">
         {{ $t('tooltip.needToSetValidPrice') }}
-      </p></b-field
+      </p></NeoField
     >
   </div>
 </template>

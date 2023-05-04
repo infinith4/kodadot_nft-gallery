@@ -2,9 +2,9 @@
   <div>
     <slot name="header"></slot>
 
-    <b-field>
+    <NeoField>
       <Auth />
-    </b-field>
+    </NeoField>
 
     <CollectionSelect
       v-model="vSelectedCollection"

@@ -1,6 +1,6 @@
 <template>
   <div class="content field-group-container">
-    <b-field grouped group-multiline>
+    <NeoField grouped group-multiline>
       <Sort
         class="control"
         :value="sortBy"
@@ -12,7 +12,7 @@
         :class="{
           'is-flex-grow-1 ': !hideSearch,
         }">
-        <b-field v-if="!hideSearch" expanded class="control">
+        <NeoField v-if="!hideSearch" expanded class="control">
           <b-input
             v-model="searchQuery"
             placeholder="Search..."
@@ -21,7 +21,7 @@
             expanded
             class="input-search">
           </b-input>
-        </b-field>
+        </NeoField>
         <BasicSwitch
           v-if="!isMoonRiver"
           v-model="vListed"
@@ -41,7 +41,7 @@
           :message="$t('tooltip.own')" />
         <slot />
       </div>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

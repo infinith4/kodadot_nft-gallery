@@ -5,14 +5,14 @@
       v-bind.sync="searchQuery"
       @resetPage="resetPage">
       <Layout class="mr-5" @change="onResize" />
-      <b-field>
+      <NeoField>
         <Pagination
           v-model="currentValue"
           has-magic-btn
           simple
           replace
           :total="total" />
-      </b-field>
+      </NeoField>
     </Search>
     <InfiniteLoading
       v-if="startPage > 1 && !isLoading && total > 0"

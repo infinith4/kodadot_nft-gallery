@@ -1,6 +1,6 @@
 <template>
   <div class="content is-hidden-mobile">
-    <b-field :position="position">
+    <NeoField :position="position">
       <b-tooltip :label="$t('tooltip.largeDisplay')">
         <b-radio-button
           v-model="preferenceLayout"
@@ -27,7 +27,7 @@
           </span>
         </b-radio-button>
       </b-tooltip>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

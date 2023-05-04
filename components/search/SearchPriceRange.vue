@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-field class="columns mb-0">
+    <NeoField class="columns mb-0">
       <b-input
         v-model="range[0]"
         type="number"
@@ -28,7 +28,7 @@
           {{ $t('general.apply') }}
         </b-button>
       </div>
-    </b-field>
+    </NeoField>
     <p v-if="applyDisabled" class="help is-danger">
       {{ $t('query.priceRange.priceValidation') }}
     </p>

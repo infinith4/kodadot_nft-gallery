@@ -3,7 +3,7 @@
     <div class="label">
       {{ $t('Minting Settings') }}
     </div>
-    <b-field>
+    <NeoField>
       <Support v-model="hasSupport" :show-price="false">
         <template #tooltip>
           <Tooltip
@@ -13,8 +13,8 @@
             tooltipsize="is-medium" />
         </template>
       </Support>
-    </b-field>
-    <b-field>
+    </NeoField>
+    <NeoField>
       <Support
         v-model="hasCarbonOffset"
         :price="1"
@@ -36,7 +36,7 @@
           </Tooltip>
         </template>
       </Support>
-    </b-field>
+    </NeoField>
     <ArweaveUploadSwitch v-model="arweaveUpload">
       <template #tooltip>
         <Tooltip

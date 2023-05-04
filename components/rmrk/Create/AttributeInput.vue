@@ -1,25 +1,25 @@
 <template>
-  <b-field grouped>
+  <NeoField grouped>
     <p v-if="!disabled" class="control">
       <b-button size="is-medium" icon-left="times" @click="remove" />
     </p>
-    <b-field label="Trait" expanded>
+    <NeoField label="Trait" expanded>
       <b-input
         v-model="vKey"
         placeholder="Background"
         expanded
         :disabled="disabled"
         spellcheck="true" />
-    </b-field>
-    <b-field label="Value" expanded>
+    </NeoField>
+    <NeoField label="Value" expanded>
       <b-input
         v-model="vValue"
         placeholder="Dark"
         expanded
         spellcheck="true"
         :disabled="disabled" />
-    </b-field>
-  </b-field>
+    </NeoField>
+  </NeoField>
 </template>
 
 <script lang="ts">

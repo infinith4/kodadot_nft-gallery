@@ -5,7 +5,7 @@
         {{ $t('createNftExplainer') }}
       </small>
     </div>
-    <b-field
+    <NeoField
       :label="$t('collection')"
       :message="$t('Select collection where do you want mint your token')">
       <b-select
@@ -17,7 +17,7 @@
           {{ option.name || option.id }} ({{ option.totalCount }})
         </option>
       </b-select>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

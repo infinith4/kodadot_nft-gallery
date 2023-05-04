@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-field :type="type" :message="err" :label="$t(label)">
+    <NeoField :type="type" :message="err" :label="$t(label)">
       <b-input
         ref="address"
         v-model="inputValue"
@@ -8,7 +8,7 @@
         icon-right-clickable
         @input="handleInput"
         @icon-right-click="clearIconClick" />
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

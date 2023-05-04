@@ -1,5 +1,5 @@
 <template>
-  <b-field :label="$t('Tags')">
+  <NeoField :label="$t('Tags')">
     <b-taginput
       id="search_tag"
       v-model="tags"
@@ -18,7 +18,7 @@
         <b>{{ $t('general.tagsAdd') }}</b>
       </template>
     </b-taginput>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

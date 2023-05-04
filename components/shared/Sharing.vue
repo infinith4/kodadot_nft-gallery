@@ -1,6 +1,6 @@
 <template>
   <div class="share">
-    <b-field position="is-right">
+    <NeoField position="is-right">
       <slot />
 
       <p class="control">
@@ -96,7 +96,7 @@
           </b-button>
         </p>
       </b-tooltip>
-    </b-field>
+    </NeoField>
   </div>
 </template>
 

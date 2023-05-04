@@ -4,9 +4,9 @@
       {{ $t(label) }}
     </h2>
     <slot name="header"></slot>
-    <b-field>
+    <NeoField>
       <Auth />
-    </b-field>
+    </NeoField>
 
     <MetadataUpload
       ref="collectionImage"

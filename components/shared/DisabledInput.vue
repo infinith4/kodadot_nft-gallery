@@ -1,7 +1,7 @@
 <template>
-  <b-field :label="label" :expanded="expanded">
+  <NeoField :label="label" :expanded="expanded">
     <b-input :value="value" :readonly="readonly" disabled></b-input>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts" setup>

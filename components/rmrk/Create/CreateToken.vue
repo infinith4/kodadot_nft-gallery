@@ -49,7 +49,7 @@
         </template>
       </template>
       <template #footer>
-        <b-field key="advanced">
+        <NeoField key="advanced">
           <CollapseWrapper
             v-if="base.edition > 1"
             visible="mint.expert.show"
@@ -60,8 +60,8 @@
               class="mt-3"
               label="mint.expert.postfix" />
           </CollapseWrapper>
-        </b-field>
-        <b-field
+        </NeoField>
+        <NeoField
           v-if="isLogIn"
           key="submit"
           type="is-danger"
@@ -71,7 +71,7 @@
             label="mint.submit"
             :loading="isLoading"
             @click="submit()" />
-        </b-field>
+        </NeoField>
       </template>
     </BaseTokenForm>
   </div>

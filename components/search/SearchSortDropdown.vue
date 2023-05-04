@@ -1,5 +1,5 @@
 <template>
-  <b-field>
+  <NeoField>
     <b-dropdown
       v-if="multipleSelect"
       v-model="selectedAction"
@@ -33,7 +33,7 @@
         }}
       </option>
     </b-select>
-  </b-field>
+  </NeoField>
 </template>
 
 <script lang="ts">

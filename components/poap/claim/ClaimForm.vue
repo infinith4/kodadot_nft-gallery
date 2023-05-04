@@ -3,9 +3,9 @@
     <p class="title is-size-3">
       Claiming does not work yet another mail will come
     </p>
-    <b-field>
+    <NeoField>
       <Auth />
-    </b-field>
+    </NeoField>
     <template v-if="isLogIn">
       <BasicInput
         v-model="token"

@@ -15,9 +15,9 @@
       >
     </p>
 
-    <b-field>
+    <NeoField>
       <Auth />
-    </b-field>
+    </NeoField>
 
     <AccountBalance />
 
@@ -27,28 +27,28 @@
 
     <BasicSwitch v-model="sendingMyself" label="action.sendToMyself" />
 
-    <b-field v-show="!sendingMyself">
+    <NeoField v-show="!sendingMyself">
       <AddressInput v-model="destinationAddress" :strict="false" />
-    </b-field>
+    </NeoField>
     <DisabledInput
       v-show="correctAddress && correctAddress !== destinationAddress"
       :label="$t('general.correctAddress')"
       :value="correctAddress" />
     <div class="box--container mb-3">
-      <b-field>
+      <NeoField>
         <BalanceInput
           v-model="price"
           :label="$t('amount')"
           :calculate="false"
           @input="onAmountFieldChange" />
-      </b-field>
-      <b-field v-if="isKSM">
+      </NeoField>
+      <NeoField v-if="isKSM">
         <ReadOnlyBalanceInput
           v-model="usdValue"
           :label-input="$t('teleport.usdInput')"
           label="USD"
           @input="onUSDFieldChange" />
-      </b-field>
+      </NeoField>
     </div>
 
     <div class="buttons">
